@@ -1,10 +1,24 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { CoreLayoutComponent } from './features/core/core.layout';
+import { CoreLayoutModule } from './features/core/core.module';
 
-const routes: Routes = [];
+const routes: Routes = [
+  {
+    path: '',
+    component: CoreLayoutComponent,
+    children: [
+      {
+        path: '',
+        loadChildren: () =>
+          import('./features/user/user.module').then((m) => m.UserModule),
+      },
+    ],
+  },
+];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  imports: [RouterModule.forRoot(routes), CoreLayoutModule],
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

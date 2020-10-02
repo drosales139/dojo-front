@@ -1,17 +1,33 @@
-/*
-  This is a "Solution Style" tsconfig.json file, and is used by editors and TypeScript’s language server to improve development experience.
-  It is not intended to be used to perform a compilation.
-
-  To learn more about this file see: https://angular.io/config/solution-tsconfig.
-*/
 {
-  "files": [],
-  "references": [
-    {
-      "path": "./tsconfig.app.json"
-    },
-    {
-      "path": "./tsconfig.spec.json"
+  "compileOnSave": false,
+  "compilerOptions": {
+    "baseUrl": "./",
+    "outDir": "./dist/out-tsc",
+    "sourceMap": true,
+    "declaration": false,
+    "downlevelIteration": true,
+    "experimentalDecorators": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "importHelpers": true,
+    "target": "es2015",
+    "typeRoots": ["node_modules/@types"],
+    "lib": ["es2018", "dom"],
+    "allowSyntheticDefaultImports": true,
+    "paths": {
+      "@dojo/components/*": ["src/app/shared/components/*"],
+      "@dojo/base": ["src/app/shared/base/index.ts"],
+      "@dojo/constants": ["src/app/shared/constants/index.ts"],
+      "@dojo/models/*": ["src/app/shared/models/*"],
+      "@dojo/services": ["src/app/shared/services/index.ts"],
+      "@dojo/validators/*": ["src/app/shared/validators/*"],
+      "@dojo/state/*": ["src/app/shared/store/*"],
+      "@dojo/guards/*": ["src/app/shared/guards/*"],
+      "@dojo/environment/*": ["src/environments/*"]
     }
-]
+  },
+  "angularCompilerOptions": {
+    "fullTemplateTypeCheck": false,
+    "strictInjectionParameters": true
+  }
 }

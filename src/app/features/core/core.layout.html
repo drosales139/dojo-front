@@ -1,0 +1,19 @@
+<div fxLayout="column">
+  <div>
+    <mat-toolbar color="primary">
+      <img src="/assets/img/logo.png" width="100px" height="auto" />
+      <span class="example-spacer"></span>
+      <div fxLayoutAlign="center center">
+        <div class="mat-body">Bienvenido: #Nombre</div>
+      </div>
+      <a mat-button routerLink="/new-user">Crear cuenta</a>
+      <a mat-button routerLink="/">Ingresar</a>
+      <a mat-button routerLink="/">Añadir producto</a>
+      <mat-icon matBadge="15" matBadgeColor="warn">shopping_cart</mat-icon>
+    </mat-toolbar>
+  </div>
+
+  <div class="router-container">
+    <router-outlet></router-outlet>
+  </div>
+</div>

@@ -1,0 +1,350 @@
+<form
+  [formGroup]="form"
+  fxLayout="column"
+  fxLayoutAlign="center stretch"
+  (ngSubmit)="onSubmit()"
+  class="mat-body"
+  fxLayoutGap="10px"
+>
+  <mat-form-field fxFlex>
+    <mat-label>Tienda especializada </mat-label>
+    <input
+      autocomplete="off"
+      formControlName="storeName"
+      matInput
+      type="text"
+      [maxLength]="NAME_MAXLENGTH"
+    />
+    <mat-error>
+      <span *ngIf="form.hasError('required', 'storeName')">
+        Este campo es requerido.
+      </span>
+      <span *ngIf="form.hasError('alphaWithSpace', 'storeName')">
+        Sólo se permiten letras.
+      </span>
+      <span *ngIf="form.hasError('whitespace', 'storeName')">
+        No has introducido caracteres.
+      </span>
+      <span
+        *ngIf="
+          !form.hasError('whitespace', 'name') &&
+          form.hasError('pattern', 'name')
+        "
+      >
+        No es un formato válido.
+      </span>
+    </mat-error>
+  </mat-form-field>
+
+  <div fxLayout="column" fxLayout.gt-sm="row" fxLayoutGap="10px">
+    <mat-form-field fxFlex>
+      <mat-label>Nombre de la tienda </mat-label>
+      <input
+        autocomplete="off"
+        formControlName="storeName"
+        matInput
+        type="text"
+        [maxLength]="NAME_MAXLENGTH"
+      />
+      <mat-error>
+        <span *ngIf="form.hasError('required', 'storeName')">
+          Este campo es requerido.
+        </span>
+        <span *ngIf="form.hasError('alphaWithSpace', 'storeName')">
+          Sólo se permiten letras.
+        </span>
+        <span *ngIf="form.hasError('whitespace', 'storeName')">
+          No has introducido caracteres.
+        </span>
+        <span
+          *ngIf="
+            !form.hasError('whitespace', 'name') &&
+            form.hasError('pattern', 'name')
+          "
+        >
+          No es un formato válido.
+        </span>
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field fxFlex>
+      <mat-label> RFC </mat-label>
+      <input
+        autocomplete="off"
+        formControlName="RFC"
+        matInput
+        type="text"
+        [maxLength]="NAME_MAXLENGTH"
+      />
+      <mat-error>
+        <span *ngIf="form.hasError('required', 'RFC')">
+          Este campo es requerido.
+        </span>
+        <span *ngIf="form.hasError('alphaWithSpace', 'RFC')">
+          Sólo se permiten letras.
+        </span>
+        <span *ngIf="form.hasError('whitespace', 'RFC')">
+          No has introducido caracteres.
+        </span>
+        <span
+          *ngIf="
+            !form.hasError('whitespace', 'RFC') &&
+            form.hasError('pattern', 'RFC')
+          "
+        >
+          No es un formato válido.
+        </span>
+      </mat-error>
+    </mat-form-field>
+  </div>
+
+  <mat-form-field fxFlex>
+    <mat-label>Direccion </mat-label>
+    <input
+      autocomplete="off"
+      formControlName="storeName"
+      matInput
+      type="text"
+      [maxLength]="NAME_MAXLENGTH"
+    />
+    <mat-error>
+      <span *ngIf="form.hasError('required', 'storeName')">
+        Este campo es requerido.
+      </span>
+      <span *ngIf="form.hasError('alphaWithSpace', 'storeName')">
+        Sólo se permiten letras.
+      </span>
+      <span *ngIf="form.hasError('whitespace', 'storeName')">
+        No has introducido caracteres.
+      </span>
+      <span
+        *ngIf="
+          !form.hasError('whitespace', 'name') &&
+          form.hasError('pattern', 'name')
+        "
+      >
+        No es un formato válido.
+      </span>
+    </mat-error>
+  </mat-form-field>
+
+  <div fxFlexFill fxLayout="column" fxLayout.gt-sm="row" fxLayoutGap="10px">
+    <mat-form-field fxFlex>
+      <mat-label>Telefono de oficina* </mat-label>
+      <input
+        autocomplete="off"
+        formControlName="name"
+        matInput
+        type="text"
+        [maxLength]="NAME_MAXLENGTH"
+      />
+      <mat-error>
+        <span *ngIf="form.hasError('required', 'name')">
+          Este campo es requerido.
+        </span>
+        <span *ngIf="form.hasError('alphaWithSpace', 'name')">
+          Sólo se permiten letras.
+        </span>
+        <span *ngIf="form.hasError('whitespace', 'name')">
+          No has introducido caracteres.
+        </span>
+        <span
+          *ngIf="
+            !form.hasError('whitespace', 'name') &&
+            form.hasError('pattern', 'name')
+          "
+        >
+          No es un formato válido.
+        </span>
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field fxFlex>
+      <mat-label>Telefono celular </mat-label>
+      <input
+        autocomplete="off"
+        formControlName="firstSurname"
+        matInput
+        type="text"
+        [maxLength]="NAME_MAXLENGTH"
+      />
+      <mat-error>
+        <span *ngIf="form.hasError('required', 'firstSurname')">
+          Este campo es requerido.
+        </span>
+        <span *ngIf="form.hasError('alphaWithSpace', 'firstSurname')">
+          Sólo se permiten letras.
+        </span>
+        <span *ngIf="form.hasError('whitespace', 'firstSurname')">
+          No has introducido caracteres.
+        </span>
+        <span
+          *ngIf="
+            !form.hasError('whitespace', 'firstSurname') &&
+            form.hasError('pattern', 'firstSurname')
+          "
+        >
+          No es un formato válido.
+        </span>
+      </mat-error>
+    </mat-form-field>
+  </div>
+
+  <div fxFlexFill fxLayout="column" fxLayout.gt-sm="row" fxLayoutGap="10px">
+    <mat-form-field fxFlex>
+      <mat-label>Nombre </mat-label>
+      <input
+        autocomplete="off"
+        formControlName="name"
+        matInput
+        type="text"
+        [maxLength]="NAME_MAXLENGTH"
+      />
+      <mat-error>
+        <span *ngIf="form.hasError('required', 'name')">
+          Este campo es requerido.
+        </span>
+        <span *ngIf="form.hasError('alphaWithSpace', 'name')">
+          Sólo se permiten letras.
+        </span>
+        <span *ngIf="form.hasError('whitespace', 'name')">
+          No has introducido caracteres.
+        </span>
+        <span
+          *ngIf="
+            !form.hasError('whitespace', 'name') &&
+            form.hasError('pattern', 'name')
+          "
+        >
+          No es un formato válido.
+        </span>
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field fxFlex>
+      <mat-label> Primer apellido </mat-label>
+      <input
+        autocomplete="off"
+        formControlName="firstSurname"
+        matInput
+        type="text"
+        [maxLength]="NAME_MAXLENGTH"
+      />
+      <mat-error>
+        <span *ngIf="form.hasError('required', 'firstSurname')">
+          Este campo es requerido.
+        </span>
+        <span *ngIf="form.hasError('alphaWithSpace', 'firstSurname')">
+          Sólo se permiten letras.
+        </span>
+        <span *ngIf="form.hasError('whitespace', 'firstSurname')">
+          No has introducido caracteres.
+        </span>
+        <span
+          *ngIf="
+            !form.hasError('whitespace', 'firstSurname') &&
+            form.hasError('pattern', 'firstSurname')
+          "
+        >
+          No es un formato válido.
+        </span>
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field fxFlex>
+      <mat-label> Segundo apellido </mat-label>
+      <input
+        autocomplete="off"
+        formControlName="secondSurname"
+        matInput
+        type="text"
+        [maxLength]="NAME_MAXLENGTH"
+      />
+      <mat-error>
+        <span *ngIf="form.hasError('alphaWithSpace', 'secondSurname')">
+          Sólo se permiten letras.
+        </span>
+        <span *ngIf="form.hasError('whitespace', 'secondSurname')">
+          No has introducido caracteres.
+        </span>
+        <span
+          *ngIf="
+            !form.hasError('whitespace', 'secondSurname') &&
+            form.hasError('pattern', 'secondSurname')
+          "
+        >
+          No es un formato válido.
+        </span>
+      </mat-error>
+    </mat-form-field>
+  </div>
+
+  <div fxFlexFill fxLayout="column" fxLayoutGap="10px">
+    <mat-form-field fxFlex>
+      <mat-label>Correo electronico*</mat-label>
+      <input autocomplete="off" formControlName="email" matInput type="text" />
+      <mat-error>
+        <span *ngIf="form.hasError('required', 'email')">
+          Este campo es requerido.
+        </span>
+        <span *ngIf="form.hasError('whitespace', 'email')">
+          No has introducido caracteres.
+        </span>
+        <span
+          *ngIf="
+            !form.hasError('whitespace', 'email') &&
+            form.hasError('pattern', 'email')
+          "
+        >
+          No es un formato válido.
+        </span>
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field fxFlex>
+      <mat-label> Nombre de usuario* </mat-label>
+      <input
+        autocomplete="off"
+        formControlName="rol"
+        matInput
+        type="text"
+        [maxLength]="NAME_MAXLENGTH"
+      />
+      <mat-error>
+        <span *ngIf="form.hasError('required', 'rol')">
+          Este campo es requerido.
+        </span>
+        <span *ngIf="form.hasError('whitespace', 'rol')">
+          No has introducido caracteres.
+        </span>
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field fxFlex>
+      <mat-label> Contraseña* </mat-label>
+      <input
+        autocomplete="off"
+        formControlName="password"
+        matInput
+        type="password"
+      />
+      <mat-error>
+        <span *ngIf="form.hasError('required', 'password')">
+          Este campo es requerido.
+        </span>
+
+        <span *ngIf="form.hasError('whitespace', 'password')">
+          No has introducido caracteres.
+        </span>
+        <span
+          *ngIf="
+            !form.hasError('whitespace', 'password') &&
+            form.hasError('pattern', 'password')
+          "
+        >
+          No es un formato válido.
+        </span>
+      </mat-error>
+    </mat-form-field>
+  </div>
+</form>
