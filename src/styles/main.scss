@@ -1,0 +1,46 @@
+@import "theme.scss";
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  height: 100vh;
+}
+
+// Specific component overrides, pieces that are not in line with the general theming
+
+// Handle buttons appropriately, with respect to line-height
+
+mat-sidenav.sidenav-lg {
+  min-width: 15%;
+}
+
+mat-sidenav.sidenav {
+  max-width: 236px;
+}
+
+.page {
+  margin-top: 64px;
+  min-height: calc(100vh - 64px);
+  overflow: auto;
+}
+
+.container {
+  min-height: calc(100vh - 152px);
+  overflow: auto;
+}
+
+.list-container {
+  min-width: 100%;
+  display: inline-table !important;
+}
+
+.responsive-container {
+  width: 500px;
+  overflow-x: scroll;
+}
+
+.toolbar {
+  position: fixed;
+  z-index: 1;
+}
